@@ -1,0 +1,248 @@
+@media only screen and (min-width: 1200px) {
+    .sorry {
+        display: none;
+    }
+    body {
+        width: auto;
+        height: 800px;
+    }
+
+    .container1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        height: 1000px;
+
+    }
+
+    .containerimg {
+        margin-left: 200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Define 2 columns */
+        grid-gap: 20px;
+        /* Add spacing between images */
+    }
+
+    .containerimg img {
+        width: 60px;
+        /* Images fill cell width */
+        height: 60px;
+        /* Images fill cell height (adjust if needed) */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover */
+        border: 3px solid rgb(175, 175, 175);
+    }
+
+    .container4 img {
+        width: 60px;
+        /* Images fill container width */
+        height: 60px;
+        margin-bottom: 20px;
+        /* Add space between images */
+        border: 3px solid rgb(175, 175, 175);
+    }
+
+    .container4 img:last-child {
+        /* Remove margin for last image */
+        margin-bottom: 0;
+    }
+
+    .container2 {
+        flex: 1;
+    }
+
+    .container3 {
+        width: 470px;
+    }
+
+    .container4 {
+        margin-top: -150px;
+        margin-left: 200px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        /* Stack images vertically */
+    }
+
+
+
+    .container {
+        margin-top: 10%;
+        background-color: aliceblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 470px;
+        height: fit-content;
+        padding: 40px;
+        overflow: hidden;
+        box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.79);
+        -webkit-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.79);
+        -moz-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.79);
+    }
+
+    .container .atas {
+        display: flex;
+
+        align-items: center;
+        /* Menyelaraskan konten secara vertikal */
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-bottom: 0;
+
+    }
+
+    .container .atas img {
+        margin-right: 12px;
+        width: 35px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 100px;
+        height: 35px;
+
+    }
+
+    .container .atas p {
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .container .atas span {
+        border-bottom: 6px dotted black;
+        margin-left: 60%;
+        margin-top: 10px;
+        width: 30px;
+    }
+
+    .container .tengah {
+        margin-top: 0px;
+        background-image: url('Profile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+    }
+
+    .icon-container {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        /* Menyelaraskan icon secara vertikal */
+    }
+
+    .icon-container img {
+        margin-right: 14px;
+        /* Tambahkan margin kanan untuk jarak antar icon */
+        width: 25px;
+        /* Sesuaikan lebar icon sesuai gambar */
+        height: 25px;
+        /* Sesuaikan tinggi icon sesuai gambar */
+        cursor: pointer;
+        /* Ubah kursor menjadi pointer saat hover */
+
+    }
+
+    .icon-right {
+        margin-left: auto;
+        /* Geser icon kanan ke ujung kanan */
+    }
+
+    .jumlah-like {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .comment {
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .popup {
+        position: fixed;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 10;
+        /* Menempatkan pop-up di atas elemen lain */
+        display: none;
+        /* Sembunyikan pop-up initially */
+    }
+
+    .popup-content {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: auto;
+        text-align: center;
+    }
+
+    .footer {
+        background-color: #333;
+        /* Adjust background color as desired */
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* Allow content to wrap on smaller screens */
+    }
+
+    .footer-content p {
+        margin: 0 10px;
+        /* Add some margin between paragraphs */
+    }
+
+    .footer a {
+        color: #fff;
+        text-decoration: none;
+        /* Remove underline */
+    }
+
+    /* Optional: Animate the current year update */
+    #year {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .footer.loaded #year {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .container {
+        display: none;
+    }
+    img {
+        display: block;
+        display: none;
+    }
+    .popup {
+        display: none;
+    }
+    .sorry {
+        display: flex;
+        padding: 20px;
+        font-family: "Poppins";
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    
+}
