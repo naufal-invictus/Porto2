@@ -2,7 +2,9 @@ const images = ["heart-act.png", "heart.png"];
 
 let currentImageIndex = 0;
 let likes = 0;
-
+document.getElementById('showImageBtn').addEventListener('click', function() {
+    document.getElementById('fullscreenImageContainer').style.display = 'flex';
+  });
 function changeIcon() {
     likes++
     currentImageIndex = (currentImageIndex + 1) % images.length;
