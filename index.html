@@ -76,6 +76,9 @@
       </div>
       <div class="sorry">
         <h1>Tidak Dapat Di Akses</h1>
+          <p>YAHAHA GABISA DI BUKA
+Situs web saya secara eksklusif untuk pengguna PC. Jika Anda mencoba mengaksesnya dengan fitur situs desktop, Anda mungkin mengalami masalah kompatibilitas</p>
+         <button id="showImageBtn">Android View</button>
         <p>Pengguna Android? Tenang, kamu tidak sendirian. Website ini juga tidak bisa dinikmati oleh iPhone.</p>
         <h6>Sebenarnya developer ini bukan malas, tapi dia sedang menghemat energi untuk project selanjutnya. Biar lebih fokus dan kreatif.</h6>
       </div>
@@ -89,7 +92,9 @@
 
 
     <script src="script.js">
-
+document.getElementById('showImageBtn').addEventListener('click', function() {
+  document.getElementById('fullscreenImageContainer').style.display = 'flex';
+});
         </script>
 </body>
 
